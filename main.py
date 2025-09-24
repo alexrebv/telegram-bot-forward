@@ -11,7 +11,7 @@ import asyncio
 logging.basicConfig(level=logging.INFO)
 
 # Загружаем токен
-BOT_TOKEN = os.getenv("BOT_TOKEN")
+BOT_TOKEN = os.getenv("7954205733:AAFuZoteW2G1e8UtYmDvmNCc15sweideVdU")
 
 bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher()
@@ -22,7 +22,7 @@ credentials = Credentials.from_service_account_file(
     "credentials.json", scopes=SCOPES
 )
 gc = gspread.authorize(credentials)
-sheet = gc.open_by_key(os.getenv("SPREADSHEET_ID")).sheet1  # первая вкладка таблицы
+sheet = gc.open_by_key(os.getenv("1J_Z2zHj4dRj6yaZR72IKQV5-hl1nkcTVmUgSRGz1NQk")).sheet1  # первая вкладка таблицы
 
 @dp.message()
 async def save_message(message: Message):
